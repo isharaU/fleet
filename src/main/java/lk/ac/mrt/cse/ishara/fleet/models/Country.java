@@ -24,7 +24,7 @@ public class Country {
     private String nationality;
     private String continent;
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<State> states;
 
 
