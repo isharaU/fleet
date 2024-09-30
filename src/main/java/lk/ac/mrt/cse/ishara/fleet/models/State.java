@@ -11,18 +11,22 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class State {
-    @Id
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
-    private String capital;
+	private Integer id;	
+	private String name;
+	private String capital;
     private String code;
 
-    @ManyToOne
-    @JoinColumn(name="countryId", insertable=false, updatable=false)
-    private Country country;
-    private Integer countryId;
-    private String details;
+	@ManyToOne
+	@JoinColumn(name="countryid", insertable=false, updatable=false)
+	private Country country;
+	
+	private Integer countryid;
+	
+	private String details;
+	
 }
