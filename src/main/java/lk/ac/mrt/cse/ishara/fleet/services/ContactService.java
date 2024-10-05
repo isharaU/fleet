@@ -1,39 +1,37 @@
 package lk.ac.mrt.cse.ishara.fleet.services;
 
-import java.util.List;
-import java.util.Optional;
-
 import lk.ac.mrt.cse.ishara.fleet.models.Contact;
+import lk.ac.mrt.cse.ishara.fleet.repositories.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kindsonthegenius.fleetms.models.Contact;
-import com.kindsonthegenius.fleetms.repositories.ContactRepository;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContactService {
-	
-	@Autowired
-	private ContactRepository contactRepository;
-	
-	//Get All Contacts
-	public List<Contact> findAll(){
-		return contactRepository.findAll();
-	}	
-	
-	//Get Contact By Id
-	public Optional<Contact> findById(int id) {
-		return contactRepository.findById(id);
-	}	
-	
-	//Delete Contact
-	public void delete(int id) {
-		contactRepository.deleteById(id);
-	}
-	
-	//Update Contact
-	public void save( Contact contact) {
-		contactRepository.save(contact);
-	}
+
+    @Autowired
+    private ContactRepository contactRepository;
+
+    //Get All Contacts
+    public List<Contact> findAll() {
+        return contactRepository.findAll();
+    }
+
+    //Get Contact By Id
+    public Optional<Contact> findById(int id) {
+        return contactRepository.findById(id);
+    }
+
+    //Delete Contact
+    public void delete(int id) {
+        contactRepository.deleteById(id);
+    }
+
+    //Update Contact
+    public void save(Contact contact) {
+        contactRepository.save(contact);
+    }
 
 }
