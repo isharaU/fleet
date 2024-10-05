@@ -2,6 +2,8 @@ package lk.ac.mrt.cse.ishara.fleet.controllers;
 
 import java.util.Optional;
 
+import lk.ac.mrt.cse.ishara.fleet.models.User;
+import lk.ac.mrt.cse.ishara.fleet.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
